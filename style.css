@@ -238,6 +238,10 @@ text-align: center;
   background: url(https://image.tmdb.org/t/p/w500/uGBVj3bEbCoZbDjjl9wTxcygko1.jpg);
   background-size:cover;
 }
+.bg-136 {
+  background: url(https://image.tmdb.org/t/p/w500/kwB7d51AIcyzPOBOHLCEZJkmPhQ.jpg);
+  background-size:cover;
+}
 .bg-2017 {
   background: url(https://image.tmdb.org/t/p/w500/uxzzxijgPIY7slzFvMotPv8wjKA.jpg);
   background-size:cover;
@@ -254,11 +258,62 @@ text-align: center;
   background: url(https://image.tmdb.org/t/p/original/cFQEO687n1K6umXbInzocxcnAQz.jpg);
   background-size:cover;
 }
-.bg-2019 {
-  background: url(https://image.tmdb.org/t/p/w500/or06FN3Dka5tukK1e9sl16pB3iy.jpg);
-  background-size:cover;
-}
-.bg-2023 {
+
+.bg-2020 {
   background: url(https://image.tmdb.org/t/p/w500/4q2NNj4S5dG2RLF9CpXsej7yXl.jpg);
   background-size:cover;
 }
+.bg-2021 {
+  background: url(https://image.tmdb.org/t/p/original/bcCBq9N1EMo3daNIjWJ8kYvrQm6.jpg);
+  background-size:cover;
+}
+.bg-2023 {
+  background: url(https://image.tmdb.org/t/p/w500/or06FN3Dka5tukK1e9sl16pB3iy.jpg);
+  background-size:cover;
+}
+.bg-2024 {
+  background: url(https://image.tmdb.org/t/p/w500/uJYYizSuA9Y3DCs0qS4qWvHfZg4.jpg);
+  background-size:cover;
+}
+.bg-1124 {
+  background: url(https://image.tmdb.org/t/p/original/bcCBq9N1EMo3daNIjWJ8kYvrQm6.jpg);
+  background-size:cover;
+}
+
+.bg-1123 {
+  background: url(https://image.tmdb.org/t/p/w500/frobUz2X5Pc8OiVZU8Oo5K3NKMM.jpg);
+  background-size:cover;
+}
+.bg-1224 {
+  background: url(https://image.tmdb.org/t/p/original/RMjgNJMeWwTBcgP6PJlBCC70et.jpg);
+  background-size:cover;
+}
+.bg-1324 {
+  background: url(https://image.tmdb.org/t/p/w500/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg);
+  background-size:cover;
+}
+.bg-1424 {
+  background: url(https://image.tmdb.org/t/p/w500/ct5pNE5dDHryHLDnxyZPYcqO1sz.jpg);
+  background-size:cover;
+}
+.bg-2025 {
+  background: url(https://image.tmdb.org/t/p/w500/ls2Hl8CXmqEHvkDqkN3fRtmDodK.jpg);
+  background-size:cover;
+}
+.bg-1125 {
+  background: url(https://image.tmdb.org/t/p/w500/pIkRyD18kl4FhoCNQuWxWu5cBLM.jpg);
+  background-size:cover;
+}
+.bg-1225 {
+  background: url(https://image.tmdb.org/t/p/w500/8dqXyslZ2hv49Oiob9UjlGSHSTR.jpg);
+  background-size:cover;
+}
+.bg-2026 {
+  background: url(https://image.tmdb.org/t/p/w500/sv1xJUazXeYqALzczSZ3O6nkH75.jpg);
+  background-size:cover;
+}
+.bg-2112 {
+  background: url(https://image.tmdb.org/t/p/w500/kEl2t3OhXc3Zb9FBh1AuYzRTgZp.jpg);
+  background-size:cover;
+}
+
