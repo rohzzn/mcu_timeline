@@ -1,6 +1,6 @@
 *{margin: 0;padding: 0;}
 body {
-  background: #ddd;
+  background: #ee171f;
 }
 
 #container
@@ -17,7 +17,7 @@ position: relative;
 
 #thumbs
 {
-background-color: #ddd;
+background-color: #ee171f;
 position: absolute;
 top: 0px;
 left: 0px;
@@ -163,6 +163,11 @@ text-align: center;
 .timeline ul li:hover .timelineYear {
   position: static;
   top:-10px;
+}
+
+h1 {
+  text-align:center;
+  color: #fff;
 }
 
 .bg-45 {
@@ -316,4 +321,9 @@ text-align: center;
   background: url(https://image.tmdb.org/t/p/w500/kEl2t3OhXc3Zb9FBh1AuYzRTgZp.jpg);
   background-size:cover;
 }
+.bg-1524 {
+  background: url(https://image.tmdb.org/t/p/w500/1BIoJGKbXjdFDAqUEiA2VHqkK1Z.jpg);
+  background-size:cover;
+}
+
 
