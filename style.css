@@ -1,109 +1,264 @@
+*{margin: 0;padding: 0;}
+body {
+  background: #ddd;
+}
+
+#container
+{
+height: 600px;
+width: 100%;
+background-color: #ddd;
+overflow: hidden;
+position: relative;
+#overflow-x: scroll;
+  margin-top: 30px;
+  display: inline-block;
+}
+
+#thumbs
+{
+background-color: #ddd;
+position: absolute;
+top: 0px;
+left: 0px;
+height: 100%;
+width: auto;
+overflow: hidden;
+white-space: nowrap;
+padding: 30px 100px;
+}
+
+.history-block {
+  height: 100%;
+  width: 300px;
+  background-color: #cdcdcd;
+  margin: 0 -2px;
+  border-right: 1px solid #fff;
+  display: inline-block;
+  font-family: 'roboto condensed', sans-serif;
+  font-size:60px;
+  font-weight: 100;
+  color: #FFF;
+  cursor: pointer;
+  box-shadow: 2px 5px 20px rgba(0,0,0,0.8);
+  transition: width 0.2s;
+}
+
+.history-block:last-of-type {
+  border-right: none;
+}
+
+.cover {
+  width: 100%;
+  height: 100%;
+  transition: background .5s;
+  background: rgba(0,0,0,0.8);
+}
+
+.cover:hover {
+  width: 100%;
+  height: 100%;
+  transition: background .5s;
+  background: rgba(0,0,0,0.8);
+}
+
+.year {
+  position: absolute;
+    top: 0px;
+    font-size: 30px;
+  font-weight:500;
+    margin: 40px 30px;
+}
+
+.title {
+  position: absolute;
+  display: block;
+  width: 260px;
+    top: 60px;
+    font-size: 15px;
+    margin: 30px;
+  white-space: normal;
+  transition: width 0.2s;
+}
+
 .timeline {
-    list-style: none;
-    padding: 0;
-    position: relative;
-    margin-top: 20px;
+  display:none;
+  position: absolute;
+  bottom: 80px;
+    font-size: 20px;
+    margin: 20px;
+  transition: display 0.8s;
 }
 
-.timeline::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    width: 100%;
-    height: 2px;
-    background-color: black;
+.timeline ul {
+  margin: 0;
+padding: 0;
+list-style-type: none;
+text-align: center;
 }
 
-.timeline li {
-    display: inline-block;
-    margin-bottom: 20px;
-    position: relative;
-    width: 250px;
-    text-align: center;
+.timeline ul li {
+  display: inline;
+  font-size: 15px;
+  font-weight: 100;
+  padding: 0px 5px;
 }
 
-.timeline li:first-child {
-    margin-left: 0;
+.timeline ul li {
+  display: inline;
+  font-size: 15px;
+  font-weight: 100;
+  padding: 0px 5px;
 }
 
-.timeline li:last-child {
-    margin-right: 0;
+.timeline ul li:before {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  color: rgba(255,255,255,0.5);
+  content: '\f10c';
+  position: absolute;
+  top: 30px;
+  margin-left:10px;
+  transition: all 0.5s;
 }
 
-.timeline li::before {
-    content: "";
-    position: absolute;
-    top: -6px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: white;
-    border: 2px solid black;
+.timeline ul li:after {
+  content: '';
+  position: absolute;
+  top: 40px;
+  margin-left:-10px;
+  width: 36px;
+  height:2px;
+  border: 1px solid rgba(255,255,255,0.5);
+  transition: all 0.5s;
 }
 
-.timeline li .timeline-content {
-    background: white;
-    position: relative;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 5px 10px rgba(0,0,0,.15);
+.timelineYear, .timelineYear:hover {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.8s;
 }
 
-.timeline li .timeline-content img {
-    display: block;
-    max-width: 200px;
-    margin: 0 auto 20px;
+.timeline ul li:hover:before {
+  content: '\f111';
+  color: #ffffff;
+  font-size: 18px;
+  transition: all 0.5s;
+  top: 29px;
+  margin-left:9px
 }
 
-.timeline li .timeline-content p {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 5px;
+.timeline ul li:hover:after {
+  content: '';
+  position: absolute;
+  top: 40px;
+  margin-left:-10px;
+  width: 36px;
+  height:2px;
+  border: 1px solid #fff;
+  transition: all 0.5s;
 }
 
-#toggle-btn {
-    background-color: black;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: none;
-    margin-bottom: 20px;
+.timeline ul li:hover .timelineYear {
+  position: static;
+  top:-10px;
 }
 
-#toggle-btn:hover {
-    background-color: white;
-    color: black;
-    cursor: pointer;
+.bg-45 {
+  background: url(https://image.tmdb.org/t/p/w500/vSNxAJTlD0r02V9sPYpOjqDZXUK.jpg);
+  background-size:cover;
 }
 
-.timeline.reverse li {
-    float: right;
+.bg-95 {
+  background: url(https://image.tmdb.org/t/p/w500/AtsgWhDnHTq68L0lLsUrCnM7TjG.jpg);
+  background-size:cover;
 }
-/* Add animation styles for timeline items */
-.timeline li.hovered .timeline-content {
-    animation-name: bounce;
-    animation-duration: 0.5s;
-  }
-  
-  @keyframes bounce {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.2);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-  
-  /* Add styles for resetting timeline items */
-.timeline li.reset .timeline-content {
-    animation-name: none;
-    transform: scale(1);
-  }
-  
+
+.bg-2010 {
+  background: url('https://image.tmdb.org/t/p/w500/78lPtwv72eTNqFW9COBYI0dWDJa.jpg');
+  background-size:cover;
+}
+
+.bg-2011 {
+  background: url(https://image.tmdb.org/t/p/w500/6WBeq4fCfn7AN0o21W9qNcRF2l9.jpg);
+  background-size:cover;
+}
+
+.bg-112 {
+  background: url(https://image.tmdb.org/t/p/w500/prSfAi1xGrhLQNxVSUFh61xQ4Qy.jpg);
+  background-size:cover;
+}
+
+.bg-2012 {
+  background: url(https://image.tmdb.org/t/p/w500/RYMX2wcKCBAr24UyPD7xwmjaTn.jpg);
+  background-size:cover;
+}
+.bg-122 {
+  background: url(https://image.tmdb.org/t/p/w500/qhPtAc1TKbMPqNvcdXSOn9Bn7hZ.jpg);
+  background-size:cover;
+}
+.bg-2013 {
+  background: url(https://image.tmdb.org/t/p/original/8hXkZlerQB0tC8UxptlADF18Ds4.jpg);
+  background-size:cover;
+}
+.bg-2014 {
+  background: url(https://image.tmdb.org/t/p/w500/tVFRpFw3xTedgPGqxW0AOI8Qhh0.jpg);
+  background-size:cover;
+}
+.bg-114 {
+  background: url(https://image.tmdb.org/t/p/original/cHoJlSiCWPScATEeDxr4ef7jJc2.jpg);
+  background-size:cover;
+}
+.bg-124 {
+  background: url(https://image.tmdb.org/t/p/original/prvWMj8cBFgVn5MLlsjlvH2hiIh.jpg);
+  background-size:cover;
+}
+.bg-124 {
+  background: url(https://image.tmdb.org/t/p/original/prvWMj8cBFgVn5MLlsjlvH2hiIh.jpg);
+  background-size:cover;
+}
+.bg-2015 {
+  background: url(https://image.tmdb.org/t/p/w500/4ssDuvEDkSArWEdyBl2X5EHvYKU.jpg);
+  background-size:cover;
+}
+.bg-115 {
+  background: url(https://image.tmdb.org/t/p/w500/4Ky7xCXPMKXGopstPjwPRd4ZDrj.jpg);
+  background-size:cover;
+}
+.bg-2016 {
+  background: url(https://image.tmdb.org/t/p/w500/rAGiXaUfPzY7CDEyNKUofk3Kw2e.jpg);
+  background-size:cover;
+}
+.bg-116 {
+  background: url(https://image.tmdb.org/t/p/w500/c24sv2weTHPsmDa7jEMN0m2P3RT.jpg);
+  background-size:cover;
+}
+.bg-126 {
+  background: url(https://image.tmdb.org/t/p/w500/uGBVj3bEbCoZbDjjl9wTxcygko1.jpg);
+  background-size:cover;
+}
+.bg-2017 {
+  background: url(https://image.tmdb.org/t/p/w500/uxzzxijgPIY7slzFvMotPv8wjKA.jpg);
+  background-size:cover;
+}
+.bg-117 {
+  background: url(https://image.tmdb.org/t/p/w500/rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg);
+  background-size:cover;
+}
+.bg-127 {
+  background: url(https://image.tmdb.org/t/p/w500/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg);
+  background-size:cover;
+}
+.bg-2018 {
+  background: url(https://image.tmdb.org/t/p/original/cFQEO687n1K6umXbInzocxcnAQz.jpg);
+  background-size:cover;
+}
+.bg-2019 {
+  background: url(https://image.tmdb.org/t/p/w500/or06FN3Dka5tukK1e9sl16pB3iy.jpg);
+  background-size:cover;
+}
+.bg-2023 {
+  background: url(https://image.tmdb.org/t/p/w500/4q2NNj4S5dG2RLF9CpXsej7yXl.jpg);
+  background-size:cover;
+}
